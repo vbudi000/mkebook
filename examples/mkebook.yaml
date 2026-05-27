@@ -1,0 +1,79 @@
+# mkebook Configuration File Example
+# Place this file in your project directory to set default options
+
+# Default settings for ebook creation
+default_format: epub
+default_language: en
+default_author: "Your Name"
+
+# Translation settings
+translation:
+  # Default translation engine (google, deepl, openai)
+  engine: google
+  
+  # Maximum chunk size for translation (in characters)
+  chunk_size: 5000
+  
+  # Preserve formatting during translation
+  preserve_format: true
+  
+  # Auto-detect source language
+  auto_detect: true
+
+# Ebook creation settings
+ebook:
+  # Include table of contents
+  include_toc: true
+  
+  # Default metadata
+  metadata:
+    publisher: "Self-Published"
+    rights: "All rights reserved"
+  
+  # EPUB-specific settings
+  epub:
+    # Cover image path (optional)
+    # cover_image: "cover.jpg"
+    
+    # CSS stylesheet path (optional)
+    # stylesheet: "styles.css"
+
+# Output settings
+output:
+  # Default output directory
+  directory: "output"
+  
+  # Overwrite existing files
+  overwrite: false
+  
+  # Create backup of original files
+  backup: true
+
+# API Keys (use environment variables in production)
+# These should be set as environment variables:
+# export DEEPL_API_KEY="your-key"
+# export OPENAI_API_KEY="your-key"
+api_keys:
+  # deepl: "${DEEPL_API_KEY}"
+  # openai: "${OPENAI_API_KEY}"
+
+# Logging settings
+logging:
+  # Log level (DEBUG, INFO, WARNING, ERROR)
+  level: INFO
+  
+  # Log file path (optional)
+  # file: "mkebook.log"
+
+# Performance settings
+performance:
+  # Number of parallel translation workers
+  workers: 4
+  
+  # Enable caching
+  cache_enabled: true
+  
+  # Cache directory
+  cache_dir: ".mkebook_cache"
+
+# Made with Bob
